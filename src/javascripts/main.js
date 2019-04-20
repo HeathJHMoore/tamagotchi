@@ -1,3 +1,11 @@
 import '../styles/main.scss';
+import pageBuilder from './helpers/pageBuilder';
+// import eat from './components/eat';
 
-console.error('hi');
+const init = () => {
+  // eat.eatBuilder();
+  // eat.eatListeners();
+  pageBuilder.pageBuilder();
+};
+
+init();
