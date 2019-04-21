@@ -4,14 +4,14 @@ let strength = 100;
 
 const fightBuilder = () => {
   let domString = '';
+  domString += '<div class="sectionContents">';
   domString += '<div>';
-  domString += '<h2>EAT</h2>';
-  domString += `<h3>${strength}</h3>`;
-  domString += `<div id="fightProgressBarOuter" style="background-color: black; width: 100px; padding: 2px;"><div id="fightProgresBarInner" style="width: ${strength}%; background-color: white; padding: 10px 0px"></div></div>`;
-  domString += '<div id="eatButtons">';
   domString += '<button id="runAway">Run Away</button>';
-  domString += '<button id="commitViolence">Commit Violence</button>';
+  domString += '<button id="commitViolence">Be Violent</button>';
   domString += '</div>';
+  domString += `<div id="fightProgressBarOuter" style="background-color: black; width: 100px; padding: 2px;"><div id="fightProgresBarInner" style="width: ${strength}%; background-color: white; padding: 10px 0px"></div></div>`;
+  domString += `<h3>${strength}</h3>`;
+  domString += '<h2>FIGHT</h2>';
   domString += '</div';
   util.printToDom('fight', domString);
 };
@@ -35,4 +35,4 @@ const fightListeners = () => {
   });
 };
 
-export default { fightBuilder, fightListeners };
+export default { fightBuilder, fightListeners, strength };
