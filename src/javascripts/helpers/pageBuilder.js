@@ -10,7 +10,7 @@ const pageBuilder = () => {
   play.playBuilder();
   fight.fightBuilder();
   sleep.sleepBuilder();
-  overall.overallProgressBuilder();
+  overall.scoreGrabber();
   eat.eatListeners();
   play.playListeners();
   fight.fightListeners();
