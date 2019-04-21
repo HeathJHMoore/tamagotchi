@@ -1,4 +1,5 @@
 import util from '../helpers/util';
+import overall from './overallProgress';
 
 let full = 100;
 
@@ -6,7 +7,7 @@ const eatBuilder = () => {
   let domString = '';
   domString += '<div class="sectionContents">';
   domString += '<h2>EAT</h2>';
-  domString += `<h3>${full}</h3>`;
+  domString += `<h3 id="fullScore">${full}</h3>`;
   domString += `<div id="eatProgressBarOuter" style="background-color: black; width: 100px; padding: 2px;"><div id="eatProgresBarInner" style="width: ${full}%; background-color: white; padding: 10px 0px"></div></div>`;
   domString += '<div id="eatButtons">';
   domString += '<button id="kale">Kale</button>';
@@ -22,6 +23,7 @@ const eatListeners = () => {
       if (full < 100) {
         full += 2;
         eatBuilder();
+        overall.scoreGrabber();
       }
     }
   });
@@ -30,9 +32,10 @@ const eatListeners = () => {
       if (full > 0) {
         full -= 2;
         eatBuilder();
+        overall.scoreGrabber();
       }
     }
   });
 };
 
-export default { eatBuilder, eatListeners, full };
+export default { eatBuilder, eatListeners };
