@@ -9,7 +9,7 @@ body {
   }
 
   to {
-    top: 250px;
+    top: 300px;
     opacity: 0;
   }
 }
@@ -99,10 +99,32 @@ body {
     button {
       width: 100px;
     }
+    button:hover {
+      background-color: black;
+      color:white;
+      cursor: pointer;
+      animation-name: buttonChange;
+      animation-duration: .25s;
+
+      @keyframes buttonChange {
+        from {
+          background-color: white;
+          color: black;
+        }
+      
+        to {
+          background-color: black;
+          color:white;
+        }
+      }
+    }
   }
   #pet {
     position: absolute;
-    top: 225px;
+    top: 280px;
+    img {
+      height: 350px;
+    }
   }
 }
 

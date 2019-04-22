@@ -8,7 +8,7 @@ const eatBuilder = () => {
   let domString = '';
   domString += '<div class="sectionContents">';
   domString += '<h2>EAT</h2>';
-  domString += `<h3 id="fullScore">${full}</h3>`;
+  domString += `<h3 id="fullScore">${full}%</h3>`;
   domString += `<div id="eatProgressBarOuter" style="background-color: black; width: 100px; padding: 2px;"><div id="eatProgresBarInner" style="width: ${full}%; background-color: white; padding: 10px 0px"></div></div>`;
   domString += '<div id="eatButtons">';
   domString += '<button id="broccoli">Broccoli</button>';
@@ -22,7 +22,7 @@ const eatListeners = () => {
   document.addEventListener('click', (e) => {
     if (e.target.id === 'broccoli') {
       if (full < 100) {
-        full += 2;
+        full += 10;
         eatBuilder();
         overall.scoreGrabber();
         emojis.broccoliBuilder();
@@ -32,7 +32,7 @@ const eatListeners = () => {
   document.addEventListener('click', (e) => {
     if (e.target.id === 'pizza') {
       if (full > 0) {
-        full -= 2;
+        full -= 10;
         eatBuilder();
         overall.scoreGrabber();
         emojis.pizzaBuilder();
