@@ -1,4 +1,5 @@
 import util from '../helpers/util';
+import emojis from './emojis';
 import overall from './overallProgress';
 
 let fun = 100;
@@ -24,6 +25,7 @@ const playListeners = () => {
         fun += 2;
         playBuilder();
         overall.scoreGrabber();
+        emojis.videoGamesBuilder();
       }
     }
   });
@@ -33,6 +35,7 @@ const playListeners = () => {
         fun -= 2;
         playBuilder();
         overall.scoreGrabber();
+        emojis.drugsBuilder();
       }
     }
   });

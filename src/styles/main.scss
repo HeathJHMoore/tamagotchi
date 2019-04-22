@@ -1,11 +1,60 @@
 body {
-  background-color: white;
+  background-color: black;
+}
+
+@keyframes slidein {
+  from {
+    top: 50px; 
+    opacity: 1;
+  }
+
+  to {
+    top: 250px;
+    opacity: 0;
+  }
 }
 
 #app {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  #emojis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    #broccoliImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #pizzaImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #videoGamesImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #drugsImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #runAwayImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #violenceImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #sleepImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+    #coffeeImage {
+      animation-name: slidein;
+      animation-duration: 1.3s;
+    }
+  }
   #progress {
     background-color: lightslategray;
     color: white;
@@ -50,6 +99,10 @@ body {
     button {
       width: 100px;
     }
+  }
+  #pet {
+    position: absolute;
+    top: 225px;
   }
 }
 

@@ -1,4 +1,5 @@
 import util from '../helpers/util';
+import emojis from './emojis';
 import overall from './overallProgress';
 
 let energy = 100;
@@ -24,6 +25,7 @@ const sleepListeners = () => {
         energy += 2;
         sleepBuilder();
         overall.scoreGrabber();
+        emojis.sleepBuilder();
       }
     }
   });
@@ -33,6 +35,7 @@ const sleepListeners = () => {
         energy -= 2;
         sleepBuilder();
         overall.scoreGrabber();
+        emojis.coffeeBuilder();
       }
     }
   });
