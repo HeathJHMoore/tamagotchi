@@ -1,4 +1,5 @@
 import util from '../helpers/util';
+import emojis from './emojis';
 import overall from './overallProgress';
 
 let strength = 100;
@@ -24,6 +25,7 @@ const fightListeners = () => {
         strength += 2;
         fightBuilder();
         overall.scoreGrabber();
+        emojis.runAwayBuilder();
       }
     }
   });
@@ -33,6 +35,7 @@ const fightListeners = () => {
         strength -= 2;
         fightBuilder();
         overall.scoreGrabber();
+        emojis.violenceBuilder();
       }
     }
   });
